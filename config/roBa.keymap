@@ -124,7 +124,7 @@
         macro0: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp D &kp O &kp N &kp K &kp E &kp Y &kp K &kp O &kp N &kp G &kp N0 &kp N0 &kp N0>;
+            bindings = <&kp D &kp O &kp N &kp K &kp E &kp Y &kp K &kp O &kp N &kp G &kp N0 &kp N0>;
             label = "NEW_MACRO";
         };
 
