@@ -48,6 +48,41 @@
             bindings = <&kp LANGUAGE_2>;
             key-positions = <17 18>;
         };
+
+        close {
+            bindings = <&kp RG(W)>;
+            key-positions = <18 19 20>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <13 12>;
+        };
+
+        allselect {
+            bindings = <&kp LG(A)>;
+            key-positions = <10 11 12 13>;
+        };
+
+        save {
+            bindings = <&kp LG(S)>;
+            key-positions = <14 13>;
+        };
+
+        pageback {
+            bindings = <&kp LG(LEFT_ARROW)>;
+            key-positions = <29 30>;
+        };
+
+        pagefoward {
+            bindings = <&kp RG(RIGHT)>;
+            key-positions = <30 31>;
+        };
+
+        key_p {
+            bindings = <&kp P>;
+            key-positions = <8 9>;
+        };
     };
 
     macros {
@@ -141,15 +176,6 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
-        };
-
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
