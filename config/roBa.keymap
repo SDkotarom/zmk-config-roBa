@@ -35,7 +35,7 @@
         };
 
         eq {
-            bindings = <&kp EQUAL>;
+            bindings = <&kp KP_EQUAL>;
             key-positions = <32 32 33>;
         };
 
