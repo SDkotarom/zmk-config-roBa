@@ -9,6 +9,11 @@
     tapping-term-ms = <100>;
 };
 
+&mmv {
+    time-to-max-speed-ms = <400>;
+    acceleration-exponent = <2>;
+};
+
 &trackball {
     automouse-layer = <4>;
     scroll-layers = <5>;
