@@ -8,6 +8,8 @@
     acceleration-exponent = <3>;
 };
 
+&mt { tapping-term-ms = <50>; };
+
 &trackball {
     automouse-layer = <4>;
     scroll-layers = <5>;
