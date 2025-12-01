@@ -120,12 +120,30 @@
         };
 
         copy {
-            bindings = <&kp LG(C)>;
+            bindings = <&kp RG(C)>;
             key-positions = <40 18>;
             slow-release;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <180>;
+            require-prior-idle-ms = <160>;
             layers = <1>;
+        };
+
+        paste {
+            bindings = <&kp RG(V)>;
+            key-positions = <40 19>;
+            slow-release;
+            require-prior-idle-ms = <160>;
+            layers = <1>;
+            timeout-ms = <180>;
+        };
+
+        cut {
+            bindings = <&kp RG(V)>;
+            key-positions = <40 20>;
+            slow-release;
+            require-prior-idle-ms = <160>;
+            layers = <1>;
+            timeout-ms = <180>;
         };
     };
 
