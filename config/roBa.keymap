@@ -173,6 +173,12 @@
         };
     };
 
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        // 4 = MOUSE レイヤー, 10000ms = 10秒（お好みで）
+        input-processors = <&zip_temp_layer 4 10000>;
+
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
