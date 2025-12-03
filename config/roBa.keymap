@@ -13,8 +13,8 @@
 /* トラックボールのセンサー設定（PMW3610） */
 &trackball {
 
-    automouse-layer = <4>;
-    scroll-layers = <5>;
+    // automouse-layer = <4>;
+    // scroll-layers = <5>;
 
     // arrows {
     //     layers = <3>;
@@ -178,8 +178,8 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* 4 = MOUSE レイヤー, 10000ms = 最大有効時間 */
-        input-processors = <&zip_temp_layer 4 10000>;
+        /* 4 = MOUSE レイヤー, 600ms = 最大有効時間 */
+        input-processors = <&zip_temp_layer 4 600>;
     };
 
     behaviors {
