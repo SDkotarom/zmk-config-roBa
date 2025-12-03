@@ -191,6 +191,15 @@
         };
     };
 
+    &zip_temp_layer {
+        // ★ この物理キーはマウス用として扱う（押してもレイヤーを抜けない）
+        excluded-positions = <
+            20 // 左クリック (MB1) のキー位置
+            21 // 中クリック (MB3) のキー位置
+            22 // 右クリック (MB2) のキー位置
+        >;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
