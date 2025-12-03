@@ -13,7 +13,7 @@
 /* トラックボールのセンサー設定（PMW3610） */
 &trackball {
 
-    // automouse-layer = <4>;
+    automouse-layer = <4>;
     scroll-layers = <5>;
 
     // arrows {
@@ -175,12 +175,12 @@
     };
 
     /* トラックボール入力で MOUSE レイヤー ON、非マウスキーで即 OFF */
-    trackball_listener {
+    /* trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
         /* 4 = MOUSE レイヤー, 800ms = 最大有効時間 */
         input-processors = <&zip_temp_layer 4 800>;
-    };
+    }; */
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
@@ -267,11 +267,11 @@
 };
 
 /* ★ Input Processor の設定は root の外に書く */
-&zip_temp_layer {
+/* &zip_temp_layer {
     /* マウスボタンとして扱うキー（押してもレイヤーを抜けない） */
     excluded-positions = <
         20 /* MB1 */
         21 /* MB3 */
         22 /* MB2 */
     >;
-};
+}; */
