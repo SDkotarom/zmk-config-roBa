@@ -14,9 +14,9 @@
     // PMW3610 の DPI（CPI）高速化
     cpi = <1600>;
 
-    // automouse-layer は Input Processor 側で制御するのでコメントアウトも可
-    automouse-layer = <4>;
-    scroll-layers = <5>;
+    // automouse-layer は Input Processor 側で制御するのでコメントアウトした
+    // automouse-layer = <4>;
+    // scroll-layers = <5>;
 };
 
  / {
