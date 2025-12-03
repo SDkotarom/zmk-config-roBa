@@ -4,22 +4,33 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/pointing.h>
 
+/* カーソル移動の加速設定 */
 &mmv {
-    // トラックボール初動を最速化
     time-to-max-speed-ms = <1>;
     acceleration-exponent = <0>;
 };
 
+/* トラックボールのセンサー設定（PMW3610） */
 &trackball {
-    // PMW3610 の DPI（CPI）高速化
     cpi = <1600>;
 
-    // automouse-layer は Input Processor 側で制御するのでコメントアウトした
-    // automouse-layer = <4>;
-    // scroll-layers = <5>;
+    automouse-layer = <4>;
+    scroll-layers = <5>;
+
+    // arrows {
+    //     layers = <3>;
+    //     bindings =
+    //         <&kp RIGHT_ARROW>,
+    //         <&kp LEFT_ARROW>,
+    //         <&kp UP_ARROW>,
+    //         <&kp DOWN_ARROW>;
+    //     tick = <10>;
+    //     wait-ms = <5>;
+    //     tap-ms = <5>;
+    // };
 };
 
- / {
+/ {
     combos {
         compatible = "zmk,combos";
 
@@ -55,7 +66,7 @@
 
         allselect {
             bindings = <&kp LG(A)>;
-            key-positions = <10 11 12 13>;
+            key-positions = <11 12>;
         };
 
         save {
@@ -164,10 +175,11 @@
         };
     };
 
-    /* ★ トラックボール動作でマウスレイヤー ON、非マウスキーで即 OFF */
+    /* トラックボール入力で MOUSE レイヤー ON、非マウスキーで即 OFF */
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        /* 4 = MOUSE レイヤー, 10000ms = 最大有効時間 */
         input-processors = <&zip_temp_layer 4 10000>;
     };
 
@@ -176,6 +188,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&macro0>;
+
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "hold-preferred";
@@ -254,6 +267,7 @@
     };
 };
 
+/* ★ Input Processor の設定は root の外に書く */
 &zip_temp_layer {
     /* マウスボタンとして扱うキー（押してもレイヤーを抜けない） */
     excluded-positions = <
