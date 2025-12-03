@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // デフォルトは 10 前後なので、まずは 40〜80 くらいがおすすめ
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 60
 
 &mmv {
@@ -64,7 +65,7 @@
 
         allselect {
             bindings = <&kp LG(A)>;
-            key-positions = <10 11 12 13>;
+            key-positions = <11 12>;
         };
 
         save {
@@ -126,7 +127,7 @@
             bindings = <&kp RG(C)>;
             key-positions = <40 18>;
             slow-release;
-            timeout-ms = <180>;
+            timeout-ms = <230>;
             require-prior-idle-ms = <160>;
             layers = <1>;
         };
@@ -137,7 +138,7 @@
             slow-release;
             require-prior-idle-ms = <160>;
             layers = <1>;
-            timeout-ms = <180>;
+            timeout-ms = <230>;
         };
 
         cut {
@@ -146,7 +147,7 @@
             slow-release;
             require-prior-idle-ms = <160>;
             layers = <1>;
-            timeout-ms = <180>;
+            timeout-ms = <230>;
         };
     };
 
