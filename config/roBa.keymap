@@ -185,7 +185,7 @@
             bindings = <&mo>, <&macro0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <130>;
             flavor = "tap-preferred";
         };
 
