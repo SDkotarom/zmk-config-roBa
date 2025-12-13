@@ -221,7 +221,8 @@
 
         default_layer {
             bindings = <
-&y_cmd  &u_or_tab_when_cmd&kp A             &kp S         &kp D         &kp F  &kp G        &kp LS(LG(S))           &lt 6 PAGE_UP  &kp H        &kp J  &kp K      &lt 5 L  &lt 5 MINUS
+&kp Q             &kp W         &kp E         &kp R  &kp T                                               &y_cmd  &u_or_tab_when_cmd  &lt 5 I  &kp O  &kp BACKSPACE
+&kp A             &kp S         &kp D         &kp F  &kp G        &kp LS(LG(S))           &lt 6 PAGE_UP  &kp H        &kp J  &kp K      &lt 5 L  &lt 5 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B        &kp LG(Z)               &kp PAGE_DOWN  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
 &kp LG(Z)         &kp LEFT_ALT  &kp LEFT_GUI  &mo 5  &lt 2 SPACE  &mt LEFT_SHIFT TAB      &mo 1          &lt 2 ENTER                             &kp ESCAPE
             >;
