@@ -219,7 +219,7 @@
 &kp LG(Z)         &kp LEFT_ALT  &kp LEFT_GUI  &mo 5  &lt 2 SPACE  &mt LEFT_SHIFT TAB      &mo 1          &lt 2 ENTER                                          &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>, <&inc_dec_kp 0 0>;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         FUNCTION {
