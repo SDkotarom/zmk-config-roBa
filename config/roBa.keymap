@@ -16,6 +16,7 @@
 };
 
 &trackball_listener {
+    /* トラックボール速度アップ用：移動量を2倍にする */
     input-processors = <&zip_xy_scaler 2 1>;
 };
 
@@ -23,24 +24,95 @@
     combos {
         compatible = "zmk,combos";
 
-        double_quotation { bindings = <&kp DOUBLE_QUOTES>; key-positions = <20 21>; };
-        eq              { bindings = <&kp EQUAL>;          key-positions = <32 32 33>; };
-        lang1           { bindings = <&kp LANGUAGE_1>;     key-positions = <19 18>; };
-        lang2           { bindings = <&kp LANGUAGE_2>;     key-positions = <17 18>; };
-        close           { bindings = <&kp RG(W)>;          key-positions = <18 19 20>; };
-        esc             { bindings = <&kp ESCAPE>;         key-positions = <13 12>; };
-        allselect       { bindings = <&kp LG(A)>;          key-positions = <11 12>; };
-        save            { bindings = <&kp LG(S)>;          key-positions = <14 13>; };
-        pageback        { bindings = <&kp LG(LEFT_ARROW)>; key-positions = <29 30>; };
-        pagefoward      { bindings = <&kp RG(RIGHT)>;      key-positions = <30 31>; };
-        key_p           { bindings = <&kp P>;              key-positions = <8 9>; };
-        userchange      { bindings = <&kp LS(LG(M))>;      key-positions = <0 1>; };
-        undo            { bindings = <&kp LG(Z)>;          key-positions = <25 26>; };
-        redo            { bindings = <&kp LG(LS(Z))>;      key-positions = <25 24>; };
-        missioncontrol  { bindings = <&kp F3>;             key-positions = <1 2 3>; };
-        desktop         { bindings = <&kp F11>;            key-positions = <2 3 4>; };
-        reload          { bindings = <&kp LG(R)>;          key-positions = <0 1 2 3>; };
-        deinstanse      { bindings = <&kp RA(RG(B))>;      key-positions = <5 6 7>; };
+        double_quotation {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <20 21>;
+        };
+
+        eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <32 32 33>;
+        };
+
+        lang1 {
+            bindings = <&kp LANGUAGE_1>;
+            key-positions = <19 18>;
+        };
+
+        lang2 {
+            bindings = <&kp LANGUAGE_2>;
+            key-positions = <17 18>;
+        };
+
+        close {
+            bindings = <&kp RG(W)>;
+            key-positions = <18 19 20>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <13 12>;
+        };
+
+        allselect {
+            bindings = <&kp LG(A)>;
+            key-positions = <11 12>;
+        };
+
+        save {
+            bindings = <&kp LG(S)>;
+            key-positions = <14 13>;
+        };
+
+        pageback {
+            bindings = <&kp LG(LEFT_ARROW)>;
+            key-positions = <29 30>;
+        };
+
+        pagefoward {
+            bindings = <&kp RG(RIGHT)>;
+            key-positions = <30 31>;
+        };
+
+        key_p {
+            bindings = <&kp P>;
+            key-positions = <8 9>;
+        };
+
+        userchange {
+            bindings = <&kp LS(LG(M))>;
+            key-positions = <0 1>;
+        };
+
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <25 26>;
+        };
+
+        redo {
+            bindings = <&kp LG(LS(Z))>;
+            key-positions = <25 24>;
+        };
+
+        missioncontrol {
+            bindings = <&kp F3>;
+            key-positions = <1 2 3>;
+        };
+
+        desktop {
+            bindings = <&kp F11>;
+            key-positions = <2 3 4>;
+        };
+
+        reload {
+            bindings = <&kp LG(R)>;
+            key-positions = <0 1 2 3>;
+        };
+
+        deinstanse {
+            bindings = <&kp RA(RG(B))>;
+            key-positions = <5 6 7>;
+        };
 
         copy {
             bindings = <&kp RG(C)>;
@@ -71,49 +143,61 @@
     };
 
     macros {
-        macro0: macro0 {
+        macro0: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp D &kp O &kp N &kp K &kp E &kp Y &kp K &kp O &kp N &kp G &kp N0 &kp N0>;
+            label = "NEW_MACRO";
         };
 
         macro1: macro1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LS(D) &kp R &kp A &kp S &kp T &kp I &kp C &kp UNDER &kp LS(M) &kp O &kp V &kp I &kp E &kp UNDER &kp N2 &kp N2 &kp N0 &kp N3>;
+            label = "MACRO1";
         };
 
         macro2: macro2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LS(D) &kp N0 &kp N &kp K &kp E &kp Y &kp UNDER &kp K &kp O &kp N &kp LS(G) &kp UNDER &kp N2 &kp N0 &kp N1 &kp N9>;
+            label = "MACRO2";
         };
     };
 
     behaviors {
-        /* 既存 */
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo &macro0>;
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&macro0>;
+
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "hold-preferred";
         };
 
-        /* Y: tap=Y / hold=⌘ */
+        /* ★Y：ホールド=⌘ / タップ=Y */
         y_cmd: y_cmd {
             compatible = "zmk,behavior-hold-tap";
+            label = "Y_CMD";
             #binding-cells = <0>;
-            bindings = <&kp LGUI &kp Y>;
+
+            /* ★ここが重要：phandle-array は <...>, <...>; 形式 */
+            bindings = <&kp LGUI>, <&kp Y>;
+
             tapping-term-ms = <180>;
             flavor = "hold-preferred";
         };
 
-        /* ⌘中だけ U → TAB */
+        /* ★⌘(GUI) が押されている間だけ U を TAB にする */
         u_or_tab_when_cmd: u_or_tab_when_cmd {
             compatible = "zmk,behavior-mod-morph";
+            label = "U_OR_TAB_WHEN_CMD";
             #binding-cells = <0>;
-            bindings = <&kp U &kp TAB>;
+
+            /* ★ここも同じ：<...>, <...>; */
+            bindings = <&kp U>, <&kp TAB>;
+
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
     };
@@ -123,10 +207,72 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T      &y_cmd  &u_or_tab_when_cmd  &lt 5 I   &kp O   &kp BACKSPACE
-&kp A  &kp S  &kp D  &kp F  &kp G      &kp LS(LG(S))               &lt 6 PAGE_UP  &kp H  &kp J  &kp K  &lt 5 L  &lt 5 MINUS
-&mt LEFT_SHIFT Z &kp X &kp C &kp V &kp B &kp LG(Z) &kp PAGE_DOWN &kp N &kp M &kp COMMA &kp DOT &lt 3 SLASH
-&kp LG(Z) &kp LEFT_ALT &kp LEFT_GUI &mo 5 &lt 2 SPACE &mt LEFT_SHIFT TAB &mo 1 &lt 2 ENTER &kp ESCAPE
+&kp Q             &kp W         &kp E         &kp R  &kp T                                               &y_cmd                 &u_or_tab_when_cmd  &lt 5 I    &kp O    &kp BACKSPACE
+&kp A             &kp S         &kp D         &kp F  &kp G        &kp LS(LG(S))           &lt 6 PAGE_UP  &kp H        &kp J  &kp K      &lt 5 L  &lt 5 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B        &kp LG(Z)               &kp PAGE_DOWN  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
+&kp LG(Z)         &kp LEFT_ALT  &kp LEFT_GUI  &mo 5  &lt 2 SPACE  &mt LEFT_SHIFT TAB      &mo 1          &lt 2 ENTER                             &kp ESCAPE
+            >;
+
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+        };
+
+        FUNCTION {
+            bindings = <
+&kp LA(LG(LC(LEFT_ARROW)))  &kp LC(LA(LG(RIGHT)))    &kp F12     &kp LEFT_BRACKET  &kp RIGHT_BRACKET                           &kp RG(RS(NUMBER_4))  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp DELETE
+&kp LA(LG(LEFT_ARROW))      &kp LG(LA(RIGHT_ARROW))  &kp Z       &kp LS(SLASH)     &kp LS(NUMBER_1)   &trans           &trans  &kp AT_SIGN           &kp RG(C)   &kp RG(V)          &kp RG(X)        &kp RS(RG(N7))
+&kp LS(LEFT_BRACKET)        &kp LS(RIGHT_BRACKET)    &kp LS(N5)  &kp LS(N9)        &kp LS(N0)         &trans           &trans  &kp UNDER             &none       &none              &none            &kp RS(RG(N8))
+&none                       &trans                   &trans      &trans            &none              &kp LS(TAB)      &trans  &none                                                                 &macro0
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        NUM {
+            bindings = <
+&none         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                                          &none   &none           &none           &none            &trans
+&none         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &trans  &trans  &none           &kp UP_ARROW    &none            &trans
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mo 5
+&trans        &trans        &trans        &trans        &trans        &trans                       &trans  &trans                                                   &macro1
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+        };
+
+        ARROW {
+            bindings = <
+&none   &none   &none   &none   &none                       &none   &none  &none  &none  &trans
+&none   &none   &none   &none   &none   &trans      &trans  &none   &none  &none  &none  &trans
+&none   &none   &none   &none   &none   &trans      &trans  &none   &none  &none  &none  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &macro2
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+        };
+
+        MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                    &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans        &trans              &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &kp LEFT_ALT  &kp LEFT_SHIFT      &trans  &trans                                &trans
+            >;
+        };
+
+        SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&bootloader  &trans  &trans  &trans  &trans                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans       &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
+&trans       &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans       &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                  &bt BT_CLR_ALL
             >;
         };
     };
