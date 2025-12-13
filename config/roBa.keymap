@@ -182,28 +182,12 @@
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&macro0>;
+            bindings = <&mo &macro0>;
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
             quick-tap-ms = <80>;
             flavor = "tap-preferred";
-        };
-
-        /* ★追加：⌘(GUI) が押されている間だけ U を TAB にする */
-        u_or_tab_when_cmd: u_or_tab_when_cmd {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_OR_TAB_WHEN_CMD";
-            #binding-cells = <0>;
-
-            /* 通常は U、⌘中は TAB */
-            bindings = <&kp U>, <&kp TAB>;
-
-            /* 左⌘/右⌘どちらでもトリガー */
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-
-            /* ★重要：⌘を“同送”して Cmd+Tab になるようにする */
-            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
         };
     };
 
@@ -212,7 +196,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R  &kp T                                               &mt LEFT_GUI Y         &u_or_tab_when_cmd  &lt 5 I    &kp O    &kp BACKSPACE
+&kp Q             &kp W         &kp E         &kp R  &kp T                                               &mt LEFT_GUI Y         &kp U               &lt 5 I    &kp O    &kp BACKSPACE
 &kp A             &kp S         &kp D         &kp F  &kp G        &kp LS(LG(S))           &lt 6 PAGE_UP  &kp H        &kp J  &kp K      &lt 5 L  &lt 5 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B        &kp LG(Z)               &kp PAGE_DOWN  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
 &kp LG(Z)         &kp LEFT_ALT  &kp LEFT_GUI  &mo 5  &lt 2 SPACE    &mt LEFT_SHIFT TAB      &mo 1          &lt 2 ENTER                             &kp ESCAPE
