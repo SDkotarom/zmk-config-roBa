@@ -189,6 +189,19 @@
             tapping-term-ms = <180>;
             flavor = "hold-preferred";
         };
+
+        /* ★追加：⌘(GUI) が押されている間だけ U を TAB にする */
+        u_or_tab_when_cmd: u_or_tab_when_cmd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_OR_TAB_WHEN_CMD";
+            #binding-cells = <0>;
+    
+            /* 通常は U、⌘中は TAB */
+            bindings = <&kp U>, <&kp TAB>;
+    
+            /* 左⌘/右⌘どちらでも反応 */
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     keymap {
