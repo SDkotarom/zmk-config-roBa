@@ -184,49 +184,37 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&macro0>;
-
+    
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "hold-preferred";
         };
-
-behaviors {
-    lt_to_layer_0: lt_to_layer_0 {
-        compatible = "zmk,behavior-hold-tap";
-        label = "LAYER_TAP_TO_0";
-        bindings = <&mo>, <&macro0>;
-
-        #binding-cells = <2>;
-        tapping-term-ms = <180>;
-        flavor = "hold-preferred";
+    
+        /* ★Y：タップ=Y / ホールド=⌘ */
+        y_cmd: y_cmd {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Y_CMD";
+            #binding-cells = <0>;
+    
+            /* 重要：1つ目が hold、2つ目が tap */
+            bindings = <&kp LGUI>, <&kp Y>;
+    
+            tapping-term-ms = <180>;
+            flavor = "hold-preferred";
+        };
+    
+        /* ★⌘(GUI) が押されている間だけ U を TAB にする */
+        u_or_tab_when_cmd: u_or_tab_when_cmd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_OR_TAB_WHEN_CMD";
+            #binding-cells = <0>;
+    
+            /* 通常は U、⌘中は TAB */
+            bindings = <&kp U>, <&kp TAB>;
+    
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
     };
-
-    /* ★Y：タップ=Y / ホールド=⌘ */
-    y_cmd: y_cmd {
-        compatible = "zmk,behavior-hold-tap";
-        label = "Y_CMD";
-        #binding-cells = <0>;
-
-        /* 重要：1つ目が hold、2つ目が tap */
-        bindings = <&kp LGUI>, <&kp Y>;
-
-        tapping-term-ms = <180>;
-        flavor = "hold-preferred";
-    };
-
-    /* ★⌘(GUI) が押されている間だけ U を TAB にする */
-    u_or_tab_when_cmd: u_or_tab_when_cmd {
-        compatible = "zmk,behavior-mod-morph";
-        label = "U_OR_TAB_WHEN_CMD";
-        #binding-cells = <0>;
-
-        /* 通常は U、⌘中は TAB */
-        bindings = <&kp U>, <&kp TAB>;
-
-        /* 左⌘/右⌘どちらでも反応 */
-        mods = <(MOD_LGUI|MOD_RGUI)>;
-    };
-};
 
     keymap {
         compatible = "zmk,keymap";
