@@ -5,6 +5,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 /* カーソル移動の加速設定 */
+
 &mmv {
     time-to-max-speed-ms = <1>;
     acceleration-exponent = <0>;
@@ -17,6 +18,7 @@
 
 &trackball_listener {
     /* トラックボール速度アップ用：移動量を2倍にする */
+
     input-processors = <&zip_xy_scaler 2 1>;
 };
 
@@ -177,12 +179,14 @@
         };
 
         /* ★Y：ホールド=⌘ / タップ=Y */
+
         y_cmd: y_cmd {
             compatible = "zmk,behavior-hold-tap";
             label = "Y_CMD";
             #binding-cells = <0>;
 
             /* ★ここが重要：phandle-array は <...>, <...>; 形式 */
+
             bindings = <&kp LGUI>, <&kp Y>;
 
             tapping-term-ms = <180>;
@@ -190,12 +194,14 @@
         };
 
         /* ★⌘(GUI) が押されている間だけ U を TAB にする */
+
         u_or_tab_when_cmd: u_or_tab_when_cmd {
             compatible = "zmk,behavior-mod-morph";
             label = "U_OR_TAB_WHEN_CMD";
             #binding-cells = <0>;
 
             /* ★ここも同じ：<...>, <...>; */
+
             bindings = <&kp U>, <&kp TAB>;
 
             mods = <(MOD_LGUI|MOD_RGUI)>;
@@ -207,13 +213,13 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R  &kp T                                               &y_cmd                 &u_or_tab_when_cmd  &lt 5 I    &kp O    &kp BACKSPACE
-&kp A             &kp S         &kp D         &kp F  &kp G        &kp LS(LG(S))           &lt 6 PAGE_UP  &kp H        &kp J  &kp K      &lt 5 L  &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B        &kp LG(Z)               &kp PAGE_DOWN  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
-&kp LG(Z)         &kp LEFT_ALT  &kp LEFT_GUI  &mo 5  &lt 2 SPACE  &mt LEFT_SHIFT TAB      &mo 1          &lt 2 ENTER                             &kp ESCAPE
+&kp Q             &kp W         &kp E         &kp R  &kp T                                               &y_cmd       &u_or_tab_when_cmd  &lt 5 I    &kp O    &kp BACKSPACE
+&kp A             &kp S         &kp D         &kp F  &kp G        &kp LS(LG(S))           &lt 6 PAGE_UP  &kp H        &kp J               &kp K      &lt 5 L  &lt 5 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B        &kp LG(Z)               &kp PAGE_DOWN  &kp N        &kp M               &kp COMMA  &kp DOT  &lt 3 SLASH
+&kp LG(Z)         &kp LEFT_ALT  &kp LEFT_GUI  &mo 5  &lt 2 SPACE  &mt LEFT_SHIFT TAB      &mo 1          &lt 2 ENTER                                          &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>, <&inc_dec_kp 0 0>;
         };
 
         FUNCTION {
