@@ -33,6 +33,16 @@
             bindings = <&kp P>;
             key-positions = <8 9>;
         };
+
+        lang_en {
+            bindings = <&kp LANG2>;
+            key-positions = <11 12>;
+        };
+
+        lang_jp {
+            bindings = <&kp LANG1>;
+            key-positions = <13 12>;
+        };
     };
 
     macros {
