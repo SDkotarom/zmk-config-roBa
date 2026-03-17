@@ -120,6 +120,8 @@
                 <&macro_tap>;
 
             label = "NEW_MACRO";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
