@@ -157,8 +157,8 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R   &kp T                                       &kp Y      &kp U  &kp I      &kp O    &kp BACKSPACE
 &kp A             &kp S         &kp D         &kp F   &kp G      &kp LG(KP_NUMBER_0)      &tog 1  &kp H      &kp J  &kp K      &kp L    &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V   &kp B      &kp LG(Z)                &tog 2  &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &tog 5  &kp SPACE  &mt LEFT_SHIFT TAB       &tog 3  &kp ENTER                             &trans
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V   &kp B      &kp LG(Z)                &tog 3  &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &tog 5  &kp SPACE  &mt LEFT_SHIFT TAB       &tog 4  &kp ENTER                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
@@ -166,10 +166,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                      &trans  &kp RS(NUMBER_7)  &kp RG(NUMBER_8)  &kp RS(NUMBER_9)  &trans
-&trans  &trans  &trans      &trans             &trans           &trans      &trans  &trans  &kp RS(NUMBER_4)  &kp RS(NUMBER_5)  &kp RS(NUMBER_6)  &trans
-&trans  &trans  &trans      &trans             &trans           &trans      &trans  &trans  &kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &trans
-&trans  &trans  &trans      &trans             &trans           &trans      &trans  &trans                                                        &trans
+&kp LA(LG(LC(LEFT_ARROW)))  &kp LA(LC(LG(RIGHT)))  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                      &trans  &kp RS(NUMBER_7)  &kp RG(NUMBER_8)  &kp RS(NUMBER_9)  &trans
+&trans                      &trans                 &trans      &trans             &trans           &trans      &trans  &trans  &kp RS(NUMBER_4)  &kp RS(NUMBER_5)  &kp RS(NUMBER_6)  &trans
+&kp LS(NUMBER_1)            &trans                 &trans      &trans             &trans           &trans      &trans  &trans  &kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &trans
+&trans                      &trans                 &trans      &trans             &trans           &trans      &trans  &trans                                                        &trans
             >;
         };
 
@@ -184,10 +184,10 @@
 
         ARROW {
             bindings = <
-&kp LA(LC(LG(LEFT)))  &kp LC(LA(LG(RIGHT)))  &trans  &trans  &trans                        &trans  &trans              &kp RG(UP_ARROW)  &kp RG(DOWN_ARROW)  &trans
-&trans                &trans                 &trans  &trans  &trans  &trans      &kp HOME  &trans  &kp RG(LEFT_ARROW)  &kp UP_ARROW      &kp RG(RIGHT)       &trans
-&trans                &trans                 &trans  &trans  &trans  &trans      &kp END   &trans  &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW     &trans
-&trans                &trans                 &trans  &trans  &trans  &trans      &trans    &trans                                                            &trans
+&kp LA(LC(LG(LEFT)))  &kp LC(LA(LG(RIGHT)))  &trans  &trans  &trans                       &trans  &trans              &kp RG(UP_ARROW)  &kp RG(DOWN_ARROW)  &trans
+&trans                &trans                 &trans  &trans  &trans  &trans      &trans   &trans  &kp RG(LEFT_ARROW)  &kp UP_ARROW      &kp RG(RIGHT)       &trans
+&trans                &trans                 &trans  &trans  &trans  &trans      &kp END  &trans  &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW     &trans
+&trans                &trans                 &trans  &trans  &trans  &trans      &trans   &trans                                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LA(LG(RIGHT))) LC(LA(LG(LEFT)))>;
