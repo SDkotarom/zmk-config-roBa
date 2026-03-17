@@ -192,10 +192,10 @@
 
         PD_BTSET {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &pd_1   &pd_2   &pd_3       &trans  &trans                                      &trans
+&trans       &trans  &trans  &trans  &trans                      &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans  &trans  &trans
+&bootloader  &trans  &trans  &pd_1   &pd_2   &pd_3       &trans  &trans                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LA(LG(RIGHT))) LC(LA(LG(LEFT)))>;
