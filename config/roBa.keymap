@@ -103,6 +103,11 @@
             bindings = <&kp RG(X)>;
             key-positions = <21 20>;
         };
+
+        reload {
+            bindings = <&kp LG(R)>;
+            key-positions = <1 0 2>;
+        };
     };
 
     macros {
