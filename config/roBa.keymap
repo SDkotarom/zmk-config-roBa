@@ -52,6 +52,21 @@
             bindings = <&kp RG(RIGHT_ARROW)>;
             key-positions = <30 31>;
         };
+
+        close {
+            bindings = <&kp RG(W)>;
+            key-positions = <19 18 20>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <12 13>;
+        };
+
+        all_select {
+            bindings = <&kp LG(A)>;
+            key-positions = <11 12>;
+        };
     };
 
     macros {
