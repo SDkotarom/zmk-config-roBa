@@ -35,12 +35,12 @@
 
         lang_en {
             bindings = <&kp LANG2>;
-            key-positions = <17 18>;
+            key-positions = <5 6>;
         };
 
         lang_jp {
             bindings = <&kp LANG1>;
-            key-positions = <18 19>;
+            key-positions = <18 17>;
         };
 
         back_page {
@@ -86,6 +86,21 @@
         save {
             bindings = <&kp LG(S)>;
             key-positions = <14 13>;
+        };
+
+        copy {
+            bindings = <&kp RG(C)>;
+            key-positions = <19 18>;
+        };
+
+        paste {
+            bindings = <&kp RG(V)>;
+            key-positions = <20 19>;
+        };
+
+        cut {
+            bindings = <&kp RG(X)>;
+            key-positions = <21 20>;
         };
     };
 
