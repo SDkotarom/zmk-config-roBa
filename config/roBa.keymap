@@ -35,12 +35,12 @@
 
         lang_en {
             bindings = <&kp LANG2>;
-            key-positions = <11 12>;
+            key-positions = <17 18>;
         };
 
         lang_jp {
             bindings = <&kp LANG1>;
-            key-positions = <13 12>;
+            key-positions = <18 19>;
         };
 
         back_page {
