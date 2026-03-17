@@ -77,6 +77,11 @@
             bindings = <&kp F3>;
             key-positions = <1 2 3>;
         };
+
+        user_switch {
+            bindings = <&kp LG(LS(M))>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
