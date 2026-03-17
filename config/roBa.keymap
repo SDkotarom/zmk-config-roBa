@@ -82,6 +82,11 @@
             bindings = <&kp LG(LS(M))>;
             key-positions = <0 1>;
         };
+
+        save {
+            bindings = <&kp LG(S)>;
+            key-positions = <14 13>;
+        };
     };
 
     macros {
