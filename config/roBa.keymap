@@ -67,6 +67,16 @@
             bindings = <&kp LG(A)>;
             key-positions = <11 12>;
         };
+
+        desktop {
+            bindings = <&kp F11>;
+            key-positions = <2 3 4>;
+        };
+
+        mission_control {
+            bindings = <&kp F3>;
+            key-positions = <1 2 3>;
+        };
     };
 
     macros {
