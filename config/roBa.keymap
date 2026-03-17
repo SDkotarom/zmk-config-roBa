@@ -26,6 +26,10 @@
     // };
 };
 
+&trackball_listener {
+    input-processors = <&zip_xy_scaler 3 2>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
