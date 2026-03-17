@@ -79,13 +79,13 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R   &kp T                                             &kp Y        &kp U  &kp I      &kp O    &kp BACKSPACE
-&kp A             &kp S         &kp D         &kp F   &kp G      &kp LS(LG(B))           &tog 1         &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V   &kp B      &kp LG(Z)               &tog 2         &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &tog 5  &kp SPACE  &mt LEFT_SHIFT TAB      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R   &kp T                                              &kp Y        &kp U  &kp I      &kp O    &kp BACKSPACE
+&kp A             &kp S         &kp D         &kp F   &kp G      &kp LG(KP_NUMBER_0)      &tog 1         &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V   &kp B      &kp LG(Z)                &tog 2         &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &tog 5  &kp SPACE  &mt LEFT_SHIFT TAB       &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
         };
 
         FUNCTION {
