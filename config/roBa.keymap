@@ -120,6 +120,9 @@
         exclamations {
             bindings = <&kp LS(NUMBER_1)>;
             key-positions = <11 10>;
+            slow-release;
+            timeout-ms = <150>;
+            require-prior-idle-ms = <50>;
         };
 
         questions {
