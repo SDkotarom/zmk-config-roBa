@@ -134,12 +134,12 @@
 
         exclamations {
             bindings = <&kp LS(NUMBER_1)>;
-            key-positions = <9 21>;
+            key-positions = <11 10>;
         };
 
         questions {
             bindings = <&kp LS(SLASH)>;
-            key-positions = <21 33>;
+            key-positions = <22 23>;
         };
     };
 
