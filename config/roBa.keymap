@@ -117,7 +117,7 @@
             key-positions = <1 0 2>;
         };
 
-        exclamations {
+        exclamation {
             bindings = <&kp LS(NUMBER_1)>;
             key-positions = <11 10>;
             slow-release;
@@ -125,7 +125,7 @@
             require-prior-idle-ms = <50>;
         };
 
-        questions {
+        question {
             bindings = <&kp LS(SLASH)>;
             key-positions = <22 23>;
         };
