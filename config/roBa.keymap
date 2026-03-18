@@ -131,6 +131,16 @@
             bindings = <&to 2>;
             key-positions = <19 20 21>;
         };
+
+        exclamations {
+            bindings = <&kp LS(NUMBER_1)>;
+            key-positions = <9 21>;
+        };
+
+        questions {
+            bindings = <&kp LS(SLASH)>;
+            key-positions = <21 33>;
+        };
     };
 
     macros {
