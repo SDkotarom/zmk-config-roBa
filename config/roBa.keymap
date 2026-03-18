@@ -191,7 +191,7 @@
         FUNC_ARROW {
             bindings = <
 &kp LA(LG(LC(LEFT_ARROW)))  &kp LA(LC(LG(RIGHT)))  &kp K_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP                               &kp HOME  &kp END             &kp RG(UP_ARROW)  &kp RG(DOWN_ARROW)   &trans
-&kp LS(NUMBER_6)            &kp LS(NUMBER_7)       &kp LS(NUMBER_8)  &kp LS(NUMBER_9)   &kp LS(NUMBER_0)  &trans              &trans  &kp AT    &kp LG(LEFT_ARROW)  &kp UP_ARROW      &kp RG(RIGHT_ARROW)  &trans
+&kp LS(NUMBER_6)            &kp LS(NUMBER_7)       &kp LS(NUMBER_8)  &kp LS(NUMBER_9)   &kp LS(NUMBER_0)  &trans              &trans  &trans    &kp LG(LEFT_ARROW)  &kp UP_ARROW      &kp RG(RIGHT_ARROW)  &trans
 &kp LS(NUMBER_1)            &kp LS(NUMBER_2)       &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   &kp LS(NUMBER_5)  &trans              &trans  &trans    &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW      &trans
 &trans                      &trans                 &trans            &trans             &trans            &kp LEFT_SHIFT      &trans  &trans                                                               &trans
             >;
