@@ -54,12 +54,12 @@
 
         back_page {
             bindings = <&kp RG(LEFT_ARROW)>;
-            key-positions = <30 31 32>;
+            key-positions = <30 31 29>;
         };
 
         forward_page {
             bindings = <&kp RG(RIGHT_ARROW)>;
-            key-positions = <31 32 33>;
+            key-positions = <31 32 30>;
         };
 
         close {
