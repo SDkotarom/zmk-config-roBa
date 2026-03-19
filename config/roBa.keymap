@@ -273,10 +273,10 @@
 
         FUNC_ARROW {
             bindings = <
-&kp LA(LG(LC(LEFT_ARROW)))  &kp LA(LC(LG(RIGHT)))  &kp LG(LA(I))     &none             &kp LG(LS(NUMBER_4))                              &kp HOME  &kp END             &kp RG(UP_ARROW)  &kp RG(DOWN_ARROW)   &trans
-&kp LC(LA(LEFT_ARROW))      &kp LA(LC(RIGHT))      &none             &kp LS(NUMBER_9)  &kp LS(NUMBER_0)      &trans              &trans  &none     &kp LG(LEFT_ARROW)  &kp UP_ARROW      &kp RG(RIGHT_ARROW)  &trans
-&kp LEFT_SHIFT              &none                  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)      &trans              &trans  &none     &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW      &trans
-&trans                      &trans                 &trans            &trans            &trans                &kp LEFT_SHIFT      &trans  &trans                                                               &trans
+&kp LA(LG(LC(LEFT_ARROW)))  &kp LA(LC(LG(RIGHT)))   &kp LG(LA(I))         &none             &kp LG(LS(NUMBER_4))                              &kp HOME  &kp END             &kp RG(UP_ARROW)  &kp RG(DOWN_ARROW)   &trans
+&kp LC(LA(LEFT_ARROW))      &kp LA(LC(RIGHT))       &kp LC(LA(UP_ARROW))  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)      &trans              &trans  &none     &kp LG(LEFT_ARROW)  &kp UP_ARROW      &kp RG(RIGHT_ARROW)  &trans
+&kp LC(LA(LG(UP_ARROW)))    &kp LC(LA(DOWN_ARROW))  &none                 &kp LS(NUMBER_4)  &kp LS(NUMBER_5)      &trans              &trans  &none     &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW      &trans
+&trans                      &trans                  &trans                &trans            &trans                &kp LEFT_SHIFT      &trans  &trans                                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(LA(RIGHT)) LG(LA(LEFT_ARROW))>;
@@ -284,10 +284,10 @@
 
         NUM {
             bindings = <
-&kp KP_EQUAL      &kp KP_DIVIDE     &kp KP_MULTIPLY   &kp PLUS          &kp MINUS                              &kp PERIOD    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
-&kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans      &trans  &kp COMMA     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
-&kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)   &trans      &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &en_slash
-&trans            &trans            &trans            &trans            &trans             &trans      &trans  &trans                                                  &trans
+&kp KP_EQUAL      &kp KP_DIVIDE     &kp KP_MULTIPLY   &kp PLUS          &kp MINUS                                         &kp PERIOD    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
+&kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                 &trans  &kp COMMA     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
+&kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)   &kp DOUBLE_QUOTES      &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &en_slash
+&trans            &trans            &trans            &trans            &trans             &trans                 &trans  &trans                                                  &trans
             >;
         };
 
