@@ -220,7 +220,7 @@
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 5    &mt LEFT_ALT SPACE  &mt LEFT_SHIFT TAB      &lt 1 AT           &lt 2 ENTER                             &mo 3
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(C_VOLUME_UP) LG(C_VOLUME_DOWN)>;
+            sensor-bindings = <&inc_dec_kp LG(C_VOLUME_DOWN) LG(C_VOLUME_UP)>;
         };
 
         FUNC_ARROW {
