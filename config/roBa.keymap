@@ -193,6 +193,8 @@
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_2 &kp SLASH>;
             label = "SLASH";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
