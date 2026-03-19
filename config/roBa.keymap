@@ -178,7 +178,7 @@
         blacket_and_left: blacket_set {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(NUMBER_9) &kp NUMBER_0 &kp LEFT_ARROW>;
+            bindings = <&kp LS(NUMBER_9) &kp RS(NUMBER_0) &kp LEFT_ARROW>;
             label = "BLACKET_SET";
         };
     };
