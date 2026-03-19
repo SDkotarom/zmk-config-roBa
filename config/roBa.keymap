@@ -293,10 +293,10 @@
 
         PD_BTSET {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &pd_1   &pd_2   &pd_3       &trans  &trans                                      &trans
+&none   &none   &none   &none  &none                      &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &trans
+&none   &none   &none   &none  &none  &trans      &trans  &none         &none         &none  &none  &trans
+&none   &none   &none   &none  &none  &trans      &trans  &none         &none         &none  &none  &trans
+&trans  &trans  &trans  &pd_1  &pd_2  &pd_3       &trans  &trans                                    &trans
             >;
         };
 
