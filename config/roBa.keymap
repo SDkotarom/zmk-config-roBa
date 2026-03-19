@@ -245,6 +245,16 @@
             tapping-term-ms = <250>;
             flavor = "balanced";
         };
+
+        hold_macro_atsign: hold_macro_atsign {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_MACRO_ATSIGN";
+            bindings = <&mo>, <&en_atsign>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -255,7 +265,7 @@
 &kp Q             &kp W         &kp E         &kp R    &kp T                                                                             &kp Y        &kp U  &kp I      &kp O    &kp BACKSPACE
 &kp A             &kp S         &lt 2 D       &lt 1 F  &kp G               &kp LG(K_MUTE)          &hold_macro_bracket RIGHT_GUI 0       &kp H        &kp J  &kp K      &kp L    &lt 5 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V    &kp B               &kp LG(Z)               &hold_macro_bracket_jp RIGHT_SHIFT 0  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &mo 5    &mt LEFT_ALT SPACE  &mt LEFT_SHIFT TAB      &lt 1 AT                              &lt 2 ENTER                             &mo 3
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &mo 5    &mt LEFT_ALT SPACE  &mt LEFT_SHIFT TAB      &hold_macro_atsign 1 0                &lt 2 ENTER                             &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp LG(C_VOLUME_DOWN) LG(C_VOLUME_UP)>;
