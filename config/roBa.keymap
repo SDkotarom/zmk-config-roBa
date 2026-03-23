@@ -152,10 +152,7 @@
         pd_1: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp D &kp O &kp N &kp K &kp E &kp Y &kp K &kp O &kp N &kp G &kp N0 &kp N0>,
-                <&macro_tap>;
-
+            bindings = <&kp LANGUAGE_2 &kp D &kp O &kp N &kp K &kp E &kp Y &kp K &kp O &kp N &kp G &kp N0 &kp N0>;
             label = "NEW_MACRO";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -164,7 +161,7 @@
         pd_2: pd_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(D) &kp R &kp A &kp S &kp T &kp I &kp C &kp UNDER &kp LS(M) &kp O &kp V &kp I &kp E &kp UNDER &kp N2 &kp N2 &kp N0 &kp N3>;
+            bindings = <&kp LANGUAGE_2 &kp LS(D) &kp R &kp A &kp S &kp T &kp I &kp C &kp UNDER &kp LS(M) &kp O &kp V &kp I &kp E &kp UNDER &kp N2 &kp N2 &kp N0 &kp N3>;
             label = "PD_2";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -173,7 +170,7 @@
         pd_3: pd_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(D) &kp N0 &kp N &kp K &kp E &kp Y &kp UNDER &kp K &kp O &kp N &kp LS(G) &kp UNDER &kp N2 &kp N0 &kp N1 &kp N9>;
+            bindings = <&kp LANGUAGE_2 &kp LS(D) &kp N0 &kp N &kp K &kp E &kp Y &kp UNDER &kp K &kp O &kp N &kp LS(G) &kp UNDER &kp N2 &kp N0 &kp N1 &kp N9>;
             label = "PD_3";
             wait-ms = <0>;
             tap-ms = <0>;
