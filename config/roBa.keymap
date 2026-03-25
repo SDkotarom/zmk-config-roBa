@@ -139,6 +139,16 @@
             bindings = <&kp RS(EQUAL)>;
             key-positions = <33 32>;
         };
+
+        TabAppSwitchLeft {
+            bindings = <&kp RS(TAB)>;
+            key-positions = <5 6>;
+        };
+
+        TabAppSwitchRight {
+            bindings = <&kp TAB>;
+            key-positions = <6 7>;
+        };
     };
 
     macros {
