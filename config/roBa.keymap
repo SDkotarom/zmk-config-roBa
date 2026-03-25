@@ -140,14 +140,44 @@
             key-positions = <33 32>;
         };
 
-        TabAppSwitchLeft {
+        TabLeft {
             bindings = <&kp RS(TAB)>;
             key-positions = <5 6>;
         };
 
-        TabAppSwitchRight {
+        TabRight {
             bindings = <&kp TAB>;
             key-positions = <6 7>;
+        };
+
+        mission_control {
+            bindings = <&kp F3>;
+            key-positions = <10 11 12 13>;
+        };
+
+        mission_control {
+            bindings = <&kp F3>;
+            key-positions = <18 19 20 21>;
+        };
+
+        desktop {
+            bindings = <&kp F13>;
+            key-positions = <14 13 12 11>;
+        };
+
+        desktop {
+            bindings = <&kp F13>;
+            key-positions = <18 19 20 21>;
+        };
+
+        TabLeft {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <2 3>;
+        };
+
+        TabRight {
+            bindings = <&kp TAB>;
+            key-positions = <3 4>;
         };
     };
 
