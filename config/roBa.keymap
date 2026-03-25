@@ -74,7 +74,7 @@
 
         all_select {
             bindings = <&kp LG(A)>;
-            key-positions = <11 12 10>;
+            key-positions = <11 12>;
         };
 
         desktop {
@@ -99,17 +99,17 @@
 
         copy {
             bindings = <&kp RG(C)>;
-            key-positions = <29 30>;
+            key-positions = <31 30>;
         };
 
         paste {
             bindings = <&kp RG(V)>;
-            key-positions = <31 30>;
+            key-positions = <31 32>;
         };
 
         cut {
             bindings = <&kp RG(X)>;
-            key-positions = <31 32>;
+            key-positions = <29 30>;
         };
 
         reload {
