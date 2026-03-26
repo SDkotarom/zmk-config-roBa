@@ -86,7 +86,7 @@
         };
 
         mission_control {
-            bindings = <&kp F3>;
+            bindings = <&kp LC(DOWN)>;
             key-positions = <1 2 3>;
         };
 
@@ -164,12 +164,12 @@
         };
 
         desktop_L {
-            bindings = <&kp F13>;
+            bindings = <&kp F11>;
             key-positions = <14 13 12 11>;
         };
 
         desktop_R {
-            bindings = <&kp F13>;
+            bindings = <&kp F11>;
             key-positions = <19 20 17 18>;
         };
 
