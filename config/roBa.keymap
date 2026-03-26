@@ -112,7 +112,7 @@
 
         cut {
             bindings = <&kp RG(X)>;
-            key-positions = <30 31 32>;
+            key-positions = <30 29>;
         };
 
         reload {
