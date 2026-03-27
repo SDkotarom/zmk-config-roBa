@@ -27,15 +27,7 @@
     };
 };
 
-// &trackball_listener { input-processors = <&zip_xy_scaler 2 1>; };
-
-&trackball_listener {
-    input-processors = <&zip_xy_scaler 2 1>;
-    scroll {
-        layers = <5>;
-        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_x_scaler 0 1>;
-    };
-};
+&trackball_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 / {
     combos {
