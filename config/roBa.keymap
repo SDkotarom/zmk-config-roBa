@@ -89,16 +89,6 @@
             key-positions = <11 12>;
         };
 
-        desktop {
-            bindings = <&kp F11>;
-            key-positions = <2 3 4>;
-        };
-
-        mission_control {
-            bindings = <&kp LC(DOWN)>;
-            key-positions = <1 2 3>;
-        };
-
         user_switch {
             bindings = <&kp LG(LS(M))>;
             key-positions = <0 1>;
@@ -203,7 +193,7 @@
         };
 
         window_max {
-            bindings = <&kp LA(LG(UP_ARROW))>;
+            bindings = <&kp LC(LA(UP_ARROW))>;
             key-positions = <10 11 12 13>;
         };
     };
