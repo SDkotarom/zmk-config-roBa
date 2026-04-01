@@ -193,7 +193,7 @@
         };
 
         window_max {
-            bindings = <&kp LC(LA(UP_ARROW))>;
+            bindings = <&kp LC(LA(LG(UP_ARROW)))>;
             key-positions = <10 11 12 13>;
         };
     };
