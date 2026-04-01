@@ -162,19 +162,9 @@
             key-positions = <6 7>;
         };
 
-        mission_control_L {
-            bindings = <&kp F3>;
-            key-positions = <10 11 12 13>;
-        };
-
         mission_control_R {
             bindings = <&kp F3>;
             key-positions = <18 19 20 21>;
-        };
-
-        desktop_L {
-            bindings = <&kp F11>;
-            key-positions = <14 13 12 11>;
         };
 
         desktop_R {
@@ -200,6 +190,21 @@
         window_right {
             bindings = <&kp LC(LA(LG(RIGHT)))>;
             key-positions = <6 7 8>;
+        };
+
+        window_up {
+            bindings = <&kp LC(LA(UP_ARROW))>;
+            key-positions = <2 3 4>;
+        };
+
+        window_down {
+            bindings = <&kp LC(LA(DOWN))>;
+            key-positions = <2 3 1>;
+        };
+
+        window_max {
+            bindings = <&kp LA(LG(UP_ARROW))>;
+            key-positions = <10 11 12 13>;
         };
     };
 
