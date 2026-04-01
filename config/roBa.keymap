@@ -191,6 +191,16 @@
             bindings = <&kp TAB>;
             key-positions = <3 4>;
         };
+
+        window_left {
+            bindings = <&kp LC(LA(LG(LEFT_ARROW)))>;
+            key-positions = <5 6 7>;
+        };
+
+        window_right {
+            bindings = <&kp LC(LA(LG(RIGHT)))>;
+            key-positions = <6 7 8>;
+        };
     };
 
     macros {
