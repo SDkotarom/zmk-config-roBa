@@ -196,6 +196,16 @@
             bindings = <&kp LC(LA(LG(UP_ARROW)))>;
             key-positions = <10 11 12 13>;
         };
+
+        window_half_left {
+            bindings = <&kp LA(LG(LEFT))>;
+            key-positions = <5 7 6 8>;
+        };
+
+        window_half_right {
+            bindings = <&kp LA(LG(RIGHT))>;
+            key-positions = <7 6 8 9>;
+        };
     };
 
     macros {
