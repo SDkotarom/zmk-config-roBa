@@ -397,6 +397,8 @@
 &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans      &trans  &none   &none  &none  &none  &trans
 &trans         &trans        &trans        &trans        &trans           &trans      &trans  &trans                       &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LS(LA(LC(LEFT_ARROW))) LS(LA(LC(RIGHT)))>;
         };
 
         PD_BTSET {
